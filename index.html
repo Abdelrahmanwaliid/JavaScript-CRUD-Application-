@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cruds</title>
+    <link rel="stylesheet" href="css/master.css" />
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h2>Cruds</h2>
+        <p>Products Management System</p>
+      </div>
+      <div class="input">
+        <input type="text" id="title" placeholder="Title" />
+        <div class="price">
+          <input
+            oninput="getTotalPrice()"
+            type="number"
+            id="price"
+            placeholder="Price"
+          />
+          <input
+            oninput="getTotalPrice()"
+            type="number"
+            id="taxes"
+            placeholder="Taxes"
+          />
+          <input
+            oninput="getTotalPrice()"
+            type="number"
+            id="ads"
+            placeholder="ads"
+          />
+          <input
+            oninput="getTotalPrice()"
+            type="number"
+            id="discount"
+            placeholder="Discount"
+          />
+          <small id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="Count" />
+        <input type="text" id="category" placeholder="Category" />
+        <button id="submit">Create</button>
+      </div>
+      <div class="output">
+        <div class="searchBlock">
+          <input
+            onkeyup="searchData(this.value)"
+            type="search"
+            id="search"
+            placeholder="Search"
+          />
+          <div class="btnSearch">
+            <button onclick="getSearchMood(this.id)" id="searchTitle">
+              Search by title
+            </button>
+            <button onclick="getSearchMood(this.id)" id="searchcategory">
+              Search by category
+            </button>
+          </div>
+        </div>
+        <div id="deleteAll"></div>
+        <table id="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Taxes</th>
+              <th>Ads</th>
+              <th>Discount</th>
+              <th>Total</th>
+              <th>Category</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <div class="vs">
+            <tbody id="tbody"></tbody>
+          </div>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
