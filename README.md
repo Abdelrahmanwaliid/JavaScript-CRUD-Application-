@@ -1,4 +1,4 @@
 # JavaScript-CRUD-Application-
 CRUD Operations using JavaScript 
-# Demo 
+# Demo in Desktop
 https://abdelrahmanwaliid.github.io/JavaScript-CRUD-Application-/
